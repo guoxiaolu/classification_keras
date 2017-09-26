@@ -30,7 +30,7 @@ from keras.optimizers import SGD
 from keras.callbacks import TensorBoard, ModelCheckpoint
 from keras.preprocessing.image import ImageDataGenerator
 from common import processing_function
-from common import InceptionV3_model
+from common import InceptionV3_model, InceptionV3_deform_model
 
 train_img_path = '/Users/Lavector/dataset/plant_disease/train'
 val_img_path = '/Users/Lavector/dataset/plant_disease/val'
@@ -44,7 +44,7 @@ image_size = (299, 299)
 batch_size = 32
 nb_epoch = 100
 
-model = InceptionV3_model(nb_classes)
+model = InceptionV3_deform_model(nb_classes)
 model.summary()
 
 # datagenerator
