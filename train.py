@@ -55,7 +55,7 @@ train_generator = gen.flow_from_directory(train_img_path, target_size=image_size
 val_generator = gen.flow_from_directory(val_img_path, target_size=image_size, classes=classes, shuffle=True,
                                           batch_size=batch_size)
 
-sgd = SGD(lr=0.001, momentum=0.9, decay=1e-3, nesterov=False)
+sgd = SGD(lr=0.1, momentum=0.9, decay=1e-5, nesterov=False)
 model.compile(optimizer=sgd,
               loss='categorical_crossentropy',
               metrics=['accuracy'])
